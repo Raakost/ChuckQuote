@@ -16,8 +16,7 @@ export class HomePage {
   }
 
   ionViewWillEnter() {
-
-    this.quoteservice.getTrumpQuote().subscribe(quote => this.trumpQuote = quote);
+    this.quoteservice.getChuckQuote().subscribe(quote => this.chuckQuote = quote);
   }
 
   GetChuckQuote() {

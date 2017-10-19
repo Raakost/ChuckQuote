@@ -1,15 +1,15 @@
 <ion-header>
   <ion-navbar>
-    <ion-title class="page-title" style="text-align: center">Trump 'n Chuck</ion-title>
+    <ion-title>Trump 'n Chuck</ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content class="center-content" padding>
-  <p class="text" *ngIf="trumpQuote">
-    {{trumpQuote.message}}
-  </p>
-  <button class="bottom-left" (click)="GetChuckQuote()" ion-button large>Chuck</button>
-  <button class="bottom-right" (click)="GetTrumpQuote()" ion-button large>Trump</button>
+<ion-content padding>
+  <div *ngIf="chuckQuote">
+    <p class="quote-text">{{chuckQuote.value.joke}}</p>
+    <button class="bottom-left" (click)="GetChuckQuote()" ion-button large>Chuck</button>
+    <button class="bottom-right" (click)="GetTrumpQuote()" ion-button large>Trump</button>
+  </div>
 </ion-content>
 
 
